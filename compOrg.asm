@@ -47,3 +47,12 @@ loop_start:
     addu $s1, $t0, $t1
     move $t0, $t1
     move $t1, $s1
+	
+	# Decrement N
+    sub $s0, $s0, 1
+
+    j print_fibonacci
+
+end_program:
+    li $v0, 10  # Exit program
+    syscall
