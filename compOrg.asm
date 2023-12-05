@@ -20,3 +20,9 @@ main:
     la $a0, error_msg
     syscall
     j end_program
+	
+legal_input:
+    # Continue with Step 2 (calculate Fibonacci sequence)
+    # Initialize Fibonacci sequence
+    li $t0, 0      # F(0)
+    li $t1, 1      # F(1)
