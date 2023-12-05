@@ -42,3 +42,8 @@ loop_start:
     li $v0, 4
     la $a0, space
     syscall
+	
+	# Calculate next Fibonacci number
+    addu $s1, $t0, $t1
+    move $t0, $t1
+    move $t1, $s1
