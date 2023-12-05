@@ -31,3 +31,9 @@ legal_input:
 print_fibonacci:
     bgez $s0, loop_start  # If N >= 0, continue printing
     j end_program         # If N < 0, end program
+	
+loop_start:
+    # Print current Fibonacci number
+    li $v0, 1
+    move $a0, $t0
+    syscall
