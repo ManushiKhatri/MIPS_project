@@ -6,7 +6,7 @@ main:
     # Display prompt
     li $v0, 4
     la $a0, prompt
-	    syscall
+	syscall
 
     # Get user input
     li $v0, 5
@@ -26,3 +26,8 @@ legal_input:
     # Initialize Fibonacci sequence
     li $t0, 0      # F(0)
     li $t1, 1      # F(1)
+	
+	# Print the first N numbers in the Fibonacci sequence
+print_fibonacci:
+    bgez $s0, loop_start  # If N >= 0, continue printing
+    j end_program         # If N < 0, end program
