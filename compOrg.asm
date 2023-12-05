@@ -37,3 +37,8 @@ loop_start:
     li $v0, 1
     move $a0, $t0
     syscall
+	
+	# Print a space
+    li $v0, 4
+    la $a0, space
+    syscall
