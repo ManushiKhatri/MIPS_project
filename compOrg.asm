@@ -56,3 +56,6 @@ loop_start:
 end_program:
     li $v0, 10  # Exit program
     syscall
+	
+.data
+space: .asciiz " "
